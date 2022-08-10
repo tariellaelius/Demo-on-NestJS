@@ -14,7 +14,7 @@ export class User {
   @Prop()
   dateOfBirth: Date;
 
-  @Prop()
+  @Prop({ unique : true })
   email: string;
 
   @Prop({ enum: ['male', 'female'] })
