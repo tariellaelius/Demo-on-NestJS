@@ -12,7 +12,7 @@ export class CountriesRepository {
         return this.countryModel.find(filterQuery).select('name');
     }
 
-    async findOne(filterQuery: FilterQuery<Country>): Promise<Country[]> {
-        return this.countryModel.find(filterQuery);
+    async findOne(filterQuery: FilterQuery<Country>): Promise<Country> {
+        return this.countryModel.findOne(filterQuery);
     }
 }

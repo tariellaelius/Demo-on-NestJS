@@ -9,7 +9,7 @@ export class CountriesService {
 
   constructor(private readonly countriesRepository: CountriesRepository) {}
 
-  findAll(): Promise<Country[]> {
+  findAll(): Promise<Partial<Country>[]> {
     return this.countriesRepository.find({});
 }
 
