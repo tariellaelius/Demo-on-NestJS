@@ -91,4 +91,8 @@ export class UsersService {
     private findLocation(id: number, collection: Location[]) {
         return collection.find(location => id === location.id);
     }
+
+    deleteUser(_id: string) {
+        return this.usersRepository.delete(_id);
+    }
 }

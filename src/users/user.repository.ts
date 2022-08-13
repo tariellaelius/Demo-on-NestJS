@@ -21,4 +21,8 @@ export class UserRepository {
     async update(id: string, user: Partial<CreateUserDto>): Promise<User> {
         return this.userModel.findOneAndUpdate({ _id: id }, user, { new: true });
     }
+
+    async delete(_id: string) {
+        return this.userModel.deleteOne({ _id });
+    }
 }
