@@ -72,7 +72,10 @@ export class UsersService {
             return {
                 id: state.id,
                 name: state.name,
-                city: null
+                city: {
+                    id: null,
+                    name: null,
+                }
             };
         }
         
