@@ -96,7 +96,9 @@ export class UsersService {
     }
 
     private findLocation(id: number, collection: Location[]) {
-        return collection.find(location => id === location.id);
+        const city = collection.find(location => id === location.id);
+        if(!city) throw new ValidationError();
+        return city;
     }
 
     deleteUser(_id: string) {
