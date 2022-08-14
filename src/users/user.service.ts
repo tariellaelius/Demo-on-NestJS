@@ -61,7 +61,14 @@ export class UsersService {
 
     private mapNames(submittedState: UserStateDto, states: State[]): UserState {
         if(!submittedState.id) {
-            return;
+            return {
+                id: null,
+                name: null,
+                city: {
+                    id: null,
+                    name: null,
+                }
+            };
         }
 
         const state = <State>this.findLocation(submittedState.id, states);
